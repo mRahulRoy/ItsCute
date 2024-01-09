@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Are You ?</title>
+    <style>
+      button {
+        width: 100px;
+        border-radius: 5px;
+        padding: 5px 10px;
+        outline: none;
+        border: 1px solid gray;
+        cursor: pointer;
+      }
+      #yesBtn {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        class="center"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        "
+      >
+        <img id="img" src="./hey.gif" alt="" />
+        <div class="btns" style="display: flex; gap: 25px; margin-top: 25px">
+          <button id="yes">Yes</button>
+          <button id="yesBtn">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+          const yesBtn = document.getElementById("yesBtn");
+          const  img = document.getElementById("img");
+          const  yes = document.getElementById("yes");
+
+          yes.addEventListener("click",(e)=>{
+            console.log("clck")
+            img.src = "./love.gif"
+          })
+
+
+          yesBtn.addEventListener('mouseover', function(e) {
+
+
+         
+
+              yesBtn.style.top = `${Math.random()*300}px`
+              yesBtn.style.left = `${Math.random()*200}px`
+              yesBtn.style.right = `${Math.random()*200}px`
+              yesBtn.style.bottom = `${Math.random()*200}px`
+        //   // This function will be called when the mouse hovers over the button
+        //   console.log('Mouse is over the button!',e.clientX,e.clientY);
+          // You can perform additional actions here
+      });
+    </script>
+  </body>
+</html>
