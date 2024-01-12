@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Are You ?</title>
     <style>
+      body{
+        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/009/740/424/original/red-love-heart-element-particle-flowing-on-pink-background-romantic-cg-abstract-glitter-for-valentine-and-wedding-free-video.jpg");
+        background-position: center;
+        background-size: contain;
+      }
       button {
         width: 100px;
         border-radius: 5px;
@@ -12,6 +17,23 @@
         outline: none;
         border: 1px solid gray;
         cursor: pointer;
+        font-size: 1.2rem;
+      }
+      button:nth-child(1){
+        background-color: red;
+        color: white;
+        height: 50px;
+        border: none;
+        box-shadow: 1px 2px 3px black;
+
+      }
+      h2{
+        text-shadow: 1px 2px 13px rgb(255, 255, 0), 1px 2px 16px rgba(255, 0, 0, 0.678);
+      }
+      button:nth-child(2){
+        /* border: none; */
+        border: 1px solid rgba(128, 128, 128, 0.616);
+        box-shadow: 1px 2px 3px black;
       }
       #yesBtn {
         position: relative;
@@ -37,7 +59,9 @@
           flex-direction: column;
         "
       >
-        <img id="img" src="./hey.gif" alt="" />
+        <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 4rem;">Date Pe Chale?</h2>
+        <!-- <video controls autoplay id="video" src=""></video> -->
+        <img id="img" src="" alt="" />
         <div class="btns" style="display: flex; gap: 25px; margin-top: 25px">
           <button id="yes">Yes</button>
           <button id="yesBtn">No</button>
@@ -46,28 +70,31 @@
     </div>
 
     <script>
-          const yesBtn = document.getElementById("yesBtn");
-          const  img = document.getElementById("img");
-          const  yes = document.getElementById("yes");
+      const yesBtn = document.getElementById("yesBtn");
+      const img = document.getElementById("img");
+      const video = document.getElementById("video");
+      const yes = document.getElementById("yes");
 
-          yes.addEventListener("click",(e)=>{
-            console.log("clck")
-            img.src = "./love.gif"
-          })
+      yes.addEventListener("click", (e) => {
+        console.log("click");
+        img.src = "./love.gif";
+        video.src = "./syz-blush-syz.gif.mp4";
+      });
 
+      yesBtn.addEventListener("mouseover", function (e) {
+        let maxWidth =
+          window.clientWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        let maxHeight =
+          window.clientHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
 
-          yesBtn.addEventListener('mouseover', function(e) {
-
-
-         
-
-              yesBtn.style.top = `${Math.random()*300}px`
-              yesBtn.style.left = `${Math.random()*200}px`
-              yesBtn.style.right = `${Math.random()*200}px`
-              yesBtn.style.bottom = `${Math.random()*200}px`
-        //   // This function will be called when the mouse hovers over the button
-        //   console.log('Mouse is over the button!',e.clientX,e.clientY);
-          // You can perform additional actions here
+        yesBtn.style.top = `${Math.random() * 300}px`;
+        yesBtn.style.left = `${Math.random() * 200}px`;
+        yesBtn.style.right = `${Math.random() * 200}px`;
+        yesBtn.style.bottom = `${Math.random() * 200}px`;
       });
     </script>
   </body>
